@@ -1,22 +1,16 @@
+plugins {
+    id("com.android.application") version "9.0.0" apply false
+}
+
 buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.1.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.0")
+        classpath("com.google.devtools.ksp:symbol-processing-gradle-plugin:2.3.5")
     }
 }
 
 allprojects {
     tasks.withType<JavaCompile> {
-        val compilerArgs = options.compilerArgs
-        compilerArgs.add("-Xlint:unchecked")
-        compilerArgs.add("-Xlint:deprecation")
+        options.compilerArgs.addAll(listOf("-Xlint", "-Xlint:-classfile", "-Xlint:-serial"))
     }
-}
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
 }

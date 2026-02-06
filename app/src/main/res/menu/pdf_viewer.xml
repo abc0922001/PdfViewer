@@ -11,30 +11,18 @@
         android:id="@+id/action_previous"
         android:icon="@drawable/ic_navigate_before_24dp"
         android:title="@string/action_previous"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_next"
         android:icon="@drawable/ic_navigate_next_24dp"
         android:title="@string/action_next"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_open"
         android:icon="@drawable/ic_insert_drive_file_24dp"
         android:title="@string/action_open"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/action_zoom_out"
-        android:icon="@drawable/ic_zoom_out_24dp"
-        android:title="@string/action_zoom_out"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/action_zoom_in"
-        android:icon="@drawable/ic_zoom_in_24dp"
-        android:title="@string/action_zoom_in"
         app:showAsAction="ifRoom" />
 
     <item
@@ -66,6 +54,23 @@
         android:icon="@drawable/ic_rotate_left_24dp"
         android:title="@string/action_rotate_counterclockwise"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share_24dp"
+        android:title="@string/action_share"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_save_as"
+        android:icon="@drawable/ic_save_24dp"
+        android:title="@string/action_save_as"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_outline"
+        android:icon="@drawable/ic_outline_bulletlist_24dp"
+        android:title="@string/action_outline" />
 
     <item
         android:id="@+id/action_view_document_properties"
